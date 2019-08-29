@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="static/css/index.css">
+  <title>Index</title>
+</head>
+<body>
+  <main class="container">
+    <h1>Index</h1>
+
+    <div class="grid">
+      <form id="registration-form">
+        <h2>Registration</h2>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="registration-name" required>
+        </div> 
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="registration-email" required>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="registration-password" required>
+        </div>
+        <div>
+          <button type="submit">Register</button>
+        </div>
+      </form>  
+
+      <form id="login-form">
+        <h2>Login</h2>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="login-email" required>
+        </div> 
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="login-password" required>
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="static/js/index.js"></script>
+</body>
+</html>
