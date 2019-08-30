@@ -2,16 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" href="static/img/favicon.ico">
   <link rel="stylesheet" href="static/css/index.css">
   <title>Index</title>
 </head>
 <body>
+  <nav>
+    <h1>Product.</h1>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a id="logout" href="#">Logout</a></li>
+    </ul>
+  </nav>
   <main class="container">
-    <h1>Index</h1>
+    <!-- User notifications -->
+    <div class="notifications"></div>
 
     <div class="grid">
-      <form id="registration-form">
-        <h2>Registration</h2>
+      <form class="auth-form" id="registration-form">
+        <h2>Register</h2>
         <div>
           <label for="name">Name</label>
           <input type="text" name="name" id="registration-name" required>
@@ -29,7 +40,7 @@
         </div>
       </form>  
 
-      <form id="login-form">
+      <form class="auth-form" id="login-form">
         <h2>Login</h2>
         <div>
           <label for="email">Email</label>

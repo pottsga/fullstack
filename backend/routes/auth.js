@@ -6,12 +6,6 @@ const jwt = require('jsonwebtoken');
 const { registerValidation, loginValidation } = require('../validation');
 
 router.post('/register', async (req, res) => {
-
-  console.log("BODY");
-  console.log(req.body);
-
-  console.log('registering...');
-
   // Validate request body
   const { error } = registerValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
@@ -36,7 +30,7 @@ router.post('/register', async (req, res) => {
     const savedUser = await user.save(); 
     res.send({user: user._id});
   } catch(err) {
-    res.status(400).send(err);
+    res.status(400).json(err);
   }
 });
 
@@ -55,7 +49,7 @@ router.post('/login', async (req, res) => {
 
   // Create and assign a token
   const token = jwt.sign({_id: user._id}, process.env.JWT_SECRET);
-  res.header('auth-token', token).send(token);
+  res.header('auth-token', token).send({token});
 });
 
 module.exports = router;
