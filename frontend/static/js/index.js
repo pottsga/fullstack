@@ -75,7 +75,9 @@ const login = async (email, password) => {
 };
 
 const logout = () => {
+  clearNotifications();
   localStorage.removeItem('token');
+  showNotification('Logged you out', 'info');
 }
 
 const register = async (name, email, password) => {
