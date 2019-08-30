@@ -6,6 +6,7 @@ Server-side and client-side code that uses mongodb, JWT, and Express on the back
 
 ### Frontend
 
+- [x] Create a frontend that talks to the backend
 - [ ] Use React in the frontend
 - [ ] Use some kind of state management tool
 
